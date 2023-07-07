@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+body {
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  background-size: inherit;
+  background: url("./images/bg-pattern-desktop.svg"),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+card {
+  display: flex;
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  margin: 3% 7% 0 11%;
+  height: auto;
+}
+
+.logo {
+  margin-bottom: 110px;
+}
+
+.image-mobile {
+  display: none;
+}
+
+.content {
+  width: 92%;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4.2rem;
+  color: var(--dark-grayish-red);
+  letter-spacing: 15px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.title span {
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+
+.info {
+  color: var(--desaturated-red);
+  font-size: 1.15em;
+  padding: 10px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.image-desktop {
+  left: 0;
+  width: 43%;
+  overflow: hidden;
+}
+
+.image-desktop img {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.email-input {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--desaturated-red);
+  flex: 1;
+  padding: 20px 45px;
+  border: 1px var(--desaturated-red) solid;
+  border-radius: 35px;
+}
+
+.email-input::placeholder {
+  color: var(--desaturated-red);
+}
+
+.email-input:focus {
+  color: var(--desaturated-red);
+  outline: 2px solid var(--desaturated-red);
+}
+
+.error-image {
+  display: none;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 90px;
+  margin: auto 0;
+  width: 25px;
+}
+
+.btn {
+  box-shadow: 0 5px 20px 3px hsl(0, 80%, 86%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 105px;
+  position: relative;
+  right: 80px;
+  padding: 0 45px;
+  border-radius: 35px;
+  border: none;
+  flex: 0 0 auto;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.error-message {
+  display: none;
+  margin-top: 10px;
+  color: var(--soft-red);
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 40px;
+  }
+
+  .content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .info {
+    font-size: 1rem;
+  }
+
+  .image-mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  .image-mobile img {
+    display: block;
+    width: 100%;
+  }
+
+  form {
+    margin-bottom: 50px;
+  }
+
+  .image-desktop {
+    display: none;
+  }
+}
